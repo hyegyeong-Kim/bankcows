@@ -1,0 +1,23 @@
+footer {padding:40px 0; border-top:1px solid #AAA;}
+footer .wrap {display:flex; justify-content:space-between; align-items:flex-start;}
+footer a, dd, .foot_bottom address, .foot_bottom p  {font-size:14px;}
+.footer_top {margin-bottom:40px; display:flex;}
+.footer_top dl{margin-right:20px;}
+.footer_top dl dd {padding:5px 0;}
+dl > dt {font-weight:600;}
+dl > dd > ul > li {padding:5px 0;}
+dl > dd > ul > li > a {position:relative}
+dl > dd > ul > li > a::after {content:''; width:10px; height:10px; border-right:1px solid black; border-top:1px solid black; position:absolute; top:50%; right: -20px; display:block; transform:translateY(-50%) rotate(45deg);}
+.foot_bottom {color:#ccc;}
+address {margin-bottom:20px;}
+footer .wrap > ul {display:flex; align-items:center;}
+footer .wrap > ul li {width:40px; height:40px; margin-right:20px;}
+
+/* 미디어쿼리 */
+@media screen and (max-width:600px) {
+  footer #inner .wrap {display: block;}
+  .footer_top {margin-bottom:0px;}
+  footer #inner .wrap .footer_top {display:block;}
+  footer #inner .wrap .footer_top dl {margin-bottom:20px;}
+  .foot_bottom {margin:20px 0;}
+}

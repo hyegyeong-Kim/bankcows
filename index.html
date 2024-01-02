@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <script src="./js/jquery-3.7.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/chart.js" defer></script>
+  <script src="./js/swiper.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header -->
+
+    <header>
+      <h1>
+        <a href="">bancow</a>
+      </h1>
+      <ul>
+        <li><a href="">회사소개</a></li>
+        <li><a href="">고객센터</a></li>
+        <li><a href="">Now bancow</a></li>
+        <li><a href="">입점/제휴문의</a></li>
+        <li class="close"><button>x</button></li>
+      </ul>
+      <div class="hamber_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <!-- // header -->
+    <div class="container">
+      <section class="visual">
+        <div id="inner">
+          <div>
+            <strong>새로움을 넘어 자산이 되다.<em></em></strong>
+            <span>한우펀딩플랫폼 뱅카우</span>
+          </div>
+          <span>
+            <button><img src="./img/playstore.png" alt="구글플레이스토어 버튼"></button>
+            <button><img src="./img/apple.png" alt="애플스토어 버튼"></button>
+          </span>
+        </div>
+        <div class="scroll_icon">
+          <p class="scroll_down">
+              scroll down
+              <img src="./img/arrow_icon.png" alt="scroll_img">
+          </p>
+      </div>
+      </section>
+      <section class="sec2_exp">
+        <div id="inner">
+          <div>
+            <em>자산의 관점을 넘은 새로운 것들이 자산이 되는 시대</em>
+            <em>뱅카우와 함께하는 한우 펀딩이</em>
+            <em>당신의 자산에 새로움을 불어넣습니다</em>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div id="inner">
+          <ul>
+            <li>
+              <dl>
+                <dt>뱅카우에서<br/>
+                  현재 키우고 있는 소는?</dt>
+                <dd><span class="nums" data-count="1143">0</span>마리+</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>뱅카우<br/>
+                  펀딩 참여 수는?</dt>
+                <dd><span class="nums" data-count="15000">0</span>+</dd>
+              </dl>
+            </li>
+          </ul>
+          <img src="./img/map.png" alt="맹카우농장분포도">
+        </div>
+      </section>
+      <section class="growth">
+        <div id="inner">
+          <h2>성장성</h2>
+          <div class="wrap">
+            <div>
+              <span>소는<br/>소비를 바탕으로<br/>성장해요</span>
+              <ul>
+                <li>
+                  <dl>
+                    <dt>주요국 소고기 소비 평균 증가율</dt>
+                    <dd>+17.8%</dd>
+                  </dl>
+                  <div>
+                    <canvas id="bar-chart" width="300" height="300"></canvas>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <ul class="slide_wrap">
+              <li class="Indicators">
+                <dl>
+                  <dt>한국</dt>
+                  <dd>+31.6%</dd>
+                </dl>
+                <dl>
+                  <dt>일본</dt>
+                  <dd>+7.7%</dd>
+                </dl>
+                <dl>
+                  <dt>중국</dt>
+                  <dd>+36.4%</dd>
+                </dl>
+                <dl>
+                  <dt>미국</dt>
+                  <dd>+26.3%</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>OECD 국가 GDP 성장</dt>
+                  <dd>+25.8%</dd>
+                  <dd>
+                    <div>
+                      <canvas id="oecd-chart" ></canvas>
+                    </div>
+                  </dd>
+                </dl>
+               
+              </li>
+              <li class="Indicators">
+                <dl>
+                  <dt>한국</dt>
+                  <dd>+19.0%</dd>
+                </dl>
+                <dl>
+                  <dt>일본</dt>
+                  <dd>+21.7%</dd>
+                </dl>
+                <dl>
+                  <dt>중국</dt>
+                  <dd>+24.5%</dd>
+                </dl>
+                <dl>
+                  <dt>미국</dt>
+                  <dd>+6.0%</dd>
+                </dl>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="safety">
+        <div id="inner">
+          <div class="wrap">
+            <ul>
+                <li>10년 전보다</li>
+                <li>+<span class="nums" data-count="20">0</span>.0%</li>
+              </ul>
+            <ul>
+              <li><h2>안정성</h2></li>
+              <li><em>한우시장은 <br/>성장하는 안정적인 시장이에요</em></li>
+              <li><span>우리나라 한우는 <br>생산량도 활발히 증가하고 있어요!</span></li>
+            </ul>
+          </div>
+          <div class="chart_toggle">
+            <canvas id="toggle_chart"></canvas>
+          </div>
+          <div class="toggle_btn_wrap">
+            <div class="toggle_btn_view">
+              <span>10년 그래프 
+                <span class="change">펼쳐보기</span>
+                <img src="./img/open.svg" alt="">
+              </span>
+            </div>
+          </div>
+          <div class="wrap reverse">
+            <ul>
+              <li>10년 전보다</li>
+              <li>+<span class="nums" data-count="81">0</span>.2%</li>
+            </ul>
+            <ul class="des">
+              <li><span>우리나라 한우는 <br>생산량도 활발히 증가하고 있어요!</span></li>
+            </ul>
+          </div>
+          <div class="sell">
+            <strong>
+              No!<br>
+              한우 경매가는 꾸준히 성장하고 있어요
+            </strong>
+            <canvas id="sell_chart"></canvas>
+          </div>
+        </div>
+      </section>
+      <section class="farm">
+        <div id="inner">
+          <strong>뱅카우와 함께하는 농장</strong>
+          <ul>
+            <li class="current"><a href="#none">전체</a></li>
+            <li><a href="#none">경기</a></li>
+            <li><a href="#none">강원</a></li>
+            <li><a href="#none">경상</a></li>
+            <li><a href="#none">전라</a></li>
+          </ul>
+          
+          <!-- tab별 스와이퍼 -->
+          <div class="swiper all current">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#none">
+                  <div class="img">
+                    <img src="./img/farm_1.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>스마트 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_2.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>스마트 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_3.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>스마트 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_4.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>스마트 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_5.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>스마트 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_6.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>스마트 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_7.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>스마트 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_8.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>스마트 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+            
+            
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="swiper gyeonggi">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_1.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경기도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_2.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경기도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_3.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경기도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_4.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경기도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_5.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경기도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_6.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경기도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_7.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경기도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_8.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경기도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+            
+            
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="swiper Gangwon">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_1.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>강원도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_2.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>강원도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_3.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>강원도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_4.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>강원도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_5.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>강원도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_6.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>강원도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_7.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>강원도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_8.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>강원도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+            
+            
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="swiper Gyeongsang">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_1.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경상도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_2.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경상도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_3.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경상도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_4.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경상도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_5.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경상도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_6.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경상도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_7.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경상도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_8.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>경상도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+            
+            
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="swiper Jeolla">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_1.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>전라도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="img">
+                    <img src="./img/farm_2.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p>전라도 축산 이론, 경험을 모두</p>
+                     <dl>
+                      <dt>14년</dt>
+                      <dd>현흥농장</dd>
+                      <dd>현흥농장 <span>강화 홍천균 영귀미면</span></dd>
+                     </dl>
+                  </div>
+                </a>
+              </div>
+             
+            
+            
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <!-- //tab별 스와이퍼 -->
+          
+
+        </div>
+      </section>
+      <section class="tutorial">
+        <div id="inner">
+          <div class="wrap">
+            <strong>뱅카우 튜토리얼</strong>
+            <em>즐거운 한우 펀딩, 그 시작을 함께</em>
+            <video controls="" name="media"><source src="https://d1c8bveijgbex6.cloudfront.net/video/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC_0613.mp4" type="video/mp4"></video>
+          </div>
+          <div class="Partners">
+            <strong>Partners</strong>
+            <ul class="element_jumps">
+              <li><img src="./img/clients_01.png" alt="홈앤쇼핑"></li>
+              <li><img src="./img/clients_02.png" alt="이마트"></li>
+              <li><img src="./img/clients_03.png" alt="우리은행"></li>
+              <li><img src="./img/clients_04.png" alt="롯데면세점"></li>
+              <li><img src="./img/clients_05.png" alt="신세계"></li>
+              <li><img src="./img/clients_06.png" alt="리바트"></li>
+              <li><img src="./img/clients_07.png" alt="미래에셋"></li>
+              <li><img src="./img/clients_08.png" alt="gsshop"></li>
+              <li><img src="./img/clients_09.png" alt="nice평가정보"></li>
+              <li><img src="./img/clients_10.png" alt="cj프레시웨어"></li>
+            </ul>
+          </div>
+          <div class="Investors">
+            <strong>Investors</strong>
+            <ul class="element_jumps">
+              <li><img src="./img/clients_01.png" alt="홈앤쇼핑"></li>
+              <li><img src="./img/clients_02.png" alt="이마트"></li>
+              <li><img src="./img/clients_03.png" alt="우리은행"></li>
+              <li><img src="./img/clients_10.png" alt="cj프레시웨어"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="review">
+        <div id="inner">
+          <strong>뱅카우 고객 후기</strong>
+        </div>
+        <div class ="slide_wrap">
+          <ul class="animation">
+            <li>
+              <dl>
+                <dt><img src="./img/review_1.png" alt=""></dt>
+                <dd>처음**</dd>
+              </dl>
+              <p>군대 월급을 조금씩 모아 제대 후 밑거름으로 쓰려구요. 안정적이고 성장하는 자산이면서, 단기성 자금 운영이 어려운 저에겐 딱 맞는 펀딩이에요!</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_2.png" alt=""></dt>
+                <dd>김**</dd>
+              </dl>
+              <p>2년 뒤 대학생이 되는 민수를 위한 적금이에요. 작지만 조금씩 펀딩에 참여해서 농가도 돕고, 성인이 될 민수에게 작게나마 선물하고 싶어요.</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_3.png" alt=""></dt>
+                <dd>장**</dd>
+              </dl>
+              <p>곧 노후를 맞을 저희 부모님을 위해 참여했어요. 점점 더 성장하는 시장, 안정적인 시장을 찾았는데, 뱅카우를 통해서 저희 부모님의 노후자금을 마련해보려구요.</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_4.png" alt=""></dt>
+                <dd>양**</dd>
+              </dl>
+              <p>한우를 제 자산으로 갖는건 신기하고 재미있는 경험이에요. 투자할 곳이 점점 많아지는 지금 시대에 분산투자처의 한 곳으로 적합하다고 생각했어요!</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_5.png" alt=""></dt>
+                <dd>박**</dd>
+              </dl>
+              <p>다양한 투자가 생겼는데, 그 중 한우는 확실히 2년뒤에는 돌아온다는 믿음이 있다는게 큰 장점인거 같아요. 혹시 폐사한다고 하더라도, 보험같은 안전장치가 있으니, 더 안정적인거 같아요!</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_6.png" alt=""></dt>
+                <dd>석**</dd>
+              </dl>
+              <p>투자의 의미도 중요하죠. 나의 투자가 대한민국 축산생태계에 보탬이 될 수 있는 한걸음이라 생각하면 의미있는 투자라는 생각이 들어요. 거기에 얻어갈 수 있는 수익과 보람은 덤!</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_4.png" alt=""></dt>
+                <dd>남**</dd>
+              </dl>
+              <p>한우를 제 자산으로 갖는건 신기하고 재미있는 경험이에요. 투자할 곳이 점점 많아지는 지금 시대에 분산투자처의 한 곳으로 적합하다고 생각했어요!</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_5.png" alt=""></dt>
+                <dd>혜**</dd>
+              </dl>
+              <p>다양한 투자가 생겼는데, 그 중 한우는 확실히 2년뒤에는 돌아온다는 믿음이 있다는게 큰 장점인거 같아요. 혹시 폐사한다고 하더라도, 보험같은 안전장치가 있으니, 더 안정적인거 같아요!</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_6.png" alt=""></dt>
+                <dd>정**</dd>
+              </dl>
+              <p>투자의 의미도 중요하죠. 나의 투자가 대한민국 축산생태계에 보탬이 될 수 있는 한걸음이라 생각하면 의미있는 투자라는 생각이 들어요. 거기에 얻어갈 수 있는 수익과 보람은 덤!</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_4.png" alt=""></dt>
+                <dd>윤**</dd>
+              </dl>
+              <p>한우를 제 자산으로 갖는건 신기하고 재미있는 경험이에요. 투자할 곳이 점점 많아지는 지금 시대에 분산투자처의 한 곳으로 적합하다고 생각했어요!</p>
+            </li>
+            <li>
+              <dl>
+                <dt><img src="./img/review_5.png" alt=""></dt>
+                <dd>마지**</dd>
+              </dl>
+              <p>다양한 투자가 생겼는데, 그 중 한우는 확실히 2년뒤에는 돌아온다는 믿음이 있다는게 큰 장점인거 같아요. 혹시 폐사한다고 하더라도, 보험같은 안전장치가 있으니, 더 안정적인거 같아요!</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- //footer -->
+  </div>
+
+  <script>
+
+
+
+
+  </script>
+</body>
+</html>
