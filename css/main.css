@@ -1,0 +1,203 @@
+
+/*-----visual-------*/
+.visual {width:100%; height:100vh; 
+  background-image: url('../img/visual.jpg'); background-position:center; background-size:cover; position:relative;}
+.visual #inner > div {position:absolute; top:40%; left:20%; display:flex; flex-direction:column; transform:translateY(-50%);}
+.visual #inner > div > strong {color:#fff; font-size:68px; font-weight:700; position:relative; opacity:0; transition:0.3s; display:inline-block;}
+.visual #inner > div > strong > em {width:0%; height:8px; background-color: rgba(65, 105, 225, 0.8); border-radius:10px; position:absolute; left:0; bottom:0; display:inline-block; transition: 0.6s;}
+.visual #inner > div > span {margin-top:40px; color:#fff; font-size:36px; font-weight:600; opacity:0; transition:0.6s}
+.visual #inner > span {position:absolute; top:80%; left:50%; transform:translateX(-50%);}
+.visual #inner > span > button {padding:0 10px;}
+
+@media screen and (max-width:1130px) {
+  .visual #inner > div {width:70%; left:5%;}
+  .visual #inner > span {top:70%;}
+}
+@media screen and (max-width:980px) {
+  .visual #inner > span {top:70%;}
+  .visual #inner > div > strong {font-size:32px}
+  .visual #inner > div > span {font-size: 18px;}
+}
+
+/* scroll down animation */
+.scroll_icon{font-weight:600; text-align: center; opacity: 0.8; position:absolute; bottom: 4%; left:50%; transform:translateX(-50%);}
+.scroll_icon img{width:50px; margin:0 auto; display:block; transform:rotate(90deg);}
+.scroll_down{white-space:nowrap; position:relative; animation-name: scroll_down; animation-duration: 2s; animation-iteration-count: infinite;}
+.scroll_icon.show{opacity:0; transition:opacity 1s, transform 1s;}
+
+@keyframes scroll_down {
+  0%{top:0px;}
+  75%{top:30px;}
+  100%{top:0px;}
+}
+/*-------sec2_exp---------*/
+.sec2_exp {padding:140px 0; background:#F7F7F7;}
+.sec2_exp #inner > div {font-size:32px; font-weight:700; display:flex; flex-direction:column; justify-content:center; align-items:center;}
+
+@media screen and (max-width:600px) {
+  .sec2_exp #inner div em {font-size: 16px;}
+}
+/*-------map---------*/
+.map {width:100%; height:100vh; padding:140px 0;}
+.map #inner {display:flex; justify-content:space-between; align-items:center;}
+
+.map #inner ul li {padding:50px 0;}
+.map #inner ul li dl dt {color:rgb(153, 153, 153); font-size:24px; line-height:1.2;}
+.map #inner ul li dl dd {font-size:100px; font-weight:700;}
+.map #inner ul li:last-of-type dl:last-of-type {position:relative;}
+.map #inner ul li:last-of-type dl:last-of-type::after {content:"2022.09 기준"; color:rgb(153, 153, 153); position:absolute; left:0; bottom:-30px;}
+
+@media screen and (max-width:1019px) {
+  .map #inner {width:94%; margin: 0 auto; display:block;}
+}
+@media screen and (max-width:800px) {
+ 
+  .map #inner li dd {font-size:12vw !important;}
+}
+
+/*-------growth----------*/
+.growth {padding:140px 0;}
+.growth #inner .wrap {display:flex;}
+.growth #inner .wrap > div {margin-right:50px; display:flex; flex-direction:column; justify-content:space-between;}
+.growth #inner .wrap > div > span {font-size:40px; font-weight:700; position:relative;}
+.growth #inner .wrap > div > span::after {content:'(2015년 대비)'; font-size:24px; position:absolute; left:0; bottom:-50px;}
+.growth #inner .wrap > div > ul {width:300px; height:400px; margin-top: 80px; padding:20px; border-radius:30px; box-shadow: rgba(102, 157, 254, 0.2) 2px 8px 8px 1px; background-color: #E8EFFF;}
+.growth #inner .wrap > div > ul li { display:flex; flex-direction:column;}
+.growth #inner .wrap > div > ul li dt {color:rgb(153, 153, 153); font-weight:700;}
+.growth #inner .wrap > div > ul li dd {color:rgb(51, 51, 51); font-size:32px; font-weight:700;}
+.growth #inner .wrap > ul {display:flex; flex-direction:column; justify-content:space-between;}
+.growth #inner .wrap > ul > li {display:flex;}
+.growth #inner .wrap > ul > li > dl {width:150px; height:150px;  margin-right:20px; border-radius:30px; box-shadow: rgb(232, 239, 255) 2px 8px 20px 6px;  display:flex; flex-direction:column; justify-content:center; align-items: center;}
+.growth #inner .wrap > ul > li > dl > dt {color:rgb(153, 153, 153); font-weight:700;}
+.growth #inner .wrap > ul > li > dl > dd {color:rgb(51, 51, 51); font-size:32px; font-weight:700}
+.growth #inner .wrap > ul > li:nth-of-type(2) dl {width:100%; height:280px; margin:20px 0; padding:20px; box-shadow:rgba(102, 157, 254, 0.2) 2px 8px 8px 1px;}
+.growth #inner .wrap > ul > li:nth-of-type(2) dl dd:nth-of-type(2) {width:100%;}
+.growth #inner .wrap > ul > li:last-of-type {display:flex;}
+.growth #inner .wrap > ul > li:last-of-type > dl {width:150px; height:200px; box-shadow: rgba(102, 157, 254, 0.2) 2px 8px 8px 1px; background-color: #E8EFFF;}
+.growth #inner .wrap > ul::before,.growth #inner .wrap > ul::after {color:rgb(153, 153, 153); font-size:16px; margin-right:20px;}
+.growth #inner .wrap > ul::before {content: "나라별 GDP 성장률"; margin-bottom:20px; text-align:right;}
+.growth #inner .wrap > ul::after {content:"나라별 소고기 소비량 증가율"; margin-top:20px; text-align:right;}
+
+@media screen and (max-width:1019px) {
+  .growth {padding-top:100vw;}
+  .growth #inner {width:94%; margin:0 auto}
+  .growth #inner .wrap {display:block}
+  .growth #inner .wrap > div {width:100%; display:flex;}
+  .growth #inner .wrap > div > ul {width:100% !important; height:80%;}
+  .growth #inner .wrap > div > span {font-size:28px;}
+  .growth h2 {font-size:20px;}
+  .growth #inner .wrap > ul {width:100%;}
+  .growth #inner .wrap > ul::before, .growth #inner .wrap > ul::after {margin:20px 0 10px 0; text-align:left;}
+  .growth #inner .wrap > ul > li > dl {padding:20px;
+  }
+  .growth #inner .wrap > ul > li 
+  .growth #inner .wrap > ul > li:nth-of-type(2) dl {width:100%; height:50%}
+}
+
+/*------- safety ---------*/
+.safety #inner .wrap {display:flex; justify-content:space-between; align-items:center;}
+.safety #inner .wrap  > ul:first-of-type {width:500px; height:192px; padding:0 20px; border-radius: 30px; background-color: rgb(255, 255, 255); box-shadow: rgb(232, 239, 255) 2px 8px 20px 6px; display:flex; justify-content:space-evenly; align-items: center;}
+.safety #inner .wrap  > ul:first-of-type li:first-of-type {color:rgb(153, 153, 153); font-size:24px;}
+.safety #inner .wrap  > ul:first-of-type li:last-of-type {font-size:80px; font-weight:700;}
+/* .safety #inner .wrap > ul:last-of-type {flex:1} */
+.safety #inner .wrap > ul li em {font-size:37px; font-weight:700;}
+.safety #inner .wrap > ul:last-of-type li span {margin-top:20px; font-size:24px; font-weight:500;}
+.safety .chart_toggle {margin-top:40px; text-align:right; overflow-y:hidden; display:none;}
+.safety .chart_toggle::after {content:"출처: 가축동향조사 통계청";  margin-top:15px; color:rgb(153, 153, 153); font-size:14px; display:inline-block;}
+.toggle_btn_view {margin-top:40px; color:rgb(153, 153, 153); font-size:20px; font-weight:500; display:flex; justify-content:space-between; align-items:center;}
+.toggle_btn_view::before {content: ""; width:75%; height:1px; margin-right:10px; background-color: #ebebeb;}
+.toggle_btn_view > span > img  {width:32px; height:32px; margin-left:5px; cursor:pointer; vertical-align:middle; display:inline-block; transition:all 0.3s;}
+.open {transform: rotate(180deg);}
+.wrap.reverse {margin:40px 0 130px 0; flex-direction:row-reverse;}
+.wrap.reverse > .des span {color:#999; font-size:30px !important;}
+.sell {padding-bottom:20px; position:relative;}
+.sell > strong {margin-bottom:20px; font-size:40px; font-weight:700; display:inline-block;}
+.sell::after {content:'출처: 축산물품질평가원 및 통계청'; margin-top:15px; color:rgb(153, 153, 153); font-size:14px; text-align:right; position:absolute; right:0; bottom:0; display:inline-block;}
+
+@media screen and (max-width:1019px) {
+ .safety #inner {max-width:94%;}
+ .safety #inner > .wrap {flex-direction:column-reverse;}
+ .safety #inner > .wrap > ul:first-of-type {width:90%; margin-top:20px; flex-direction:column;}
+ .safety #inner > .wrap > ul:first-of-type li:last-of-type {font-size:50px;}
+ .safety #inner > .wrap > ul:nth-of-type(2) {width:90%;}
+ .safety #inner > .wrap > ul:nth-of-type(2) li em {font-size:30px}
+ .toggle_btn_view {position:relative; z-index:110;}
+ .swiper {z-index:110;}
+ .remove {z-index:0;}
+}
+
+
+/*---------farm-----------*/
+.farm {padding:140px 0;}
+.farm #inner {display:flex; flex-direction:column;}
+.farm #inner > ul {margin-top:25px; display:flex;}
+.farm #inner > ul a {padding:0 30px 0 0; color:#999; font-size:24px; font-weight:700;}
+.farm #inner > ul > li.current > a{color:#000; font-weight:700;}
+.swiper {overflow:hidden !important;}
+.swiper.all, .gyeonggi, .Gangwon, .Gyeongsang, .Jeolla{max-width:1020px; padding:0px 60px 0px 60px !important; display:none;}
+.swiper-wrapper {
+   padding:30px 0; }
+.swiper .swiper-slide {width:400px !important; border-radius: 30px; background-color: rgb(255, 255, 255); box-shadow: rgb(232, 239, 255) 2px 8px 20px 6px;  box-sizing: border-box; overflow: hidden;}
+.text {padding:20px;}
+.text p {font-size:20px; font-weight:700;}
+.text dl {margin-top:10px; display:flex; align-items:center;}
+.text dt {margin-right:15px; position:relative;}
+.text dt::after {content:''; width:1px; height:80%; background-color:#999; position:absolute; top:50%; right:-25%; display:block; transform:translateY(-50%);}
+.text dd {font-weight:600;}
+.text dd span {color:#999}
+.farm #inner .swiper.current {display:block;}
+
+/*-------tutorial--------*/
+.tutorial {padding-bottom:130px;}
+.tutorial #inner .wrap {margin-bottom:50px; display:flex; flex-direction:column;}
+.tutorial #inner .wrap em {color:rgb(153, 153, 153); font-size:24px; font-weight:500;}
+.tutorial video {width:100%; background:rgb(238, 238, 238); display:block;}
+.tutorial #inner {display:flex; flex-direction:column;}
+.tutorial .Partners strong , .tutorial .Investors strong {color:rgb(0,75,250); font-size:28px; font-weight:700;}
+
+
+/*partners*/
+.Partners {margin-top:300px;}
+ul.element_jumps {display:flex; justify-content: flex-start; flex-wrap:wrap;}
+ul.element_jumps li {width:20%; box-sizing: border-box;}
+
+/*Investors*/
+.Investors {margin-top:120px;}
+
+
+/* keyframes animation */
+@keyframes jumps {
+  0%, 40%, 100% {transform:translateY(0)}
+  20% {transform: translateY(-1.2rem);}
+}
+@keyframes titledeco {
+  0% {opacity:0; transform: translateY(125%);}
+  100% {opacity:1; transform: translateY(0);}
+}
+
+/*---------review-------------*/
+.review {padding-bottom:130px;}
+.slide_wrap {max-width: 1920px; min-height: 110px; padding: 40px 0; overflow:hidden; position: relative;}
+.review ul {width:calc(4608px); margin:30px 0; display:flex; gap:24px;}
+.review ul > li {width:360px; height:430px; padding:30px; border-radius: 30px; background-color: rgb(255, 255, 255); box-shadow: rgb(232, 239, 255) 2px 8px 20px 6px; display:flex; flex-direction:column;}
+.review ul > li > dl {margin-bottom:30px; display:flex;  align-items:center;}
+.review ul > li > dl dt {width:72px; height:72px}
+.review ul > li > dl dd {margin-left:24px; font-size:20px; font-weight:500;}
+.animation_2 {animation: 5s linear 0s infinite normal none running kxqXab;}
+.animation {animation: 20s linear 0s infinite normal none running kxqXab;}
+.slide_wrap:hover .animation {animation-play-state:paused;}
+
+@keyframes kxqXab {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
+
+@media screen and (max-width:1000px) {
+  
+}
+
+/* .visual #inner > div > strong:hover > em {width:100%;} */
