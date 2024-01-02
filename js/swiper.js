@@ -4,7 +4,7 @@ var option = {
     prevEl: ".swiper-button-prev",
   },
   slidesPerView: 1,
-  spaceBetween: 10,
+  // spaceBetween: 10,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -13,7 +13,7 @@ var option = {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 10,
+      // spaceBetween: 10,
     },
         
     640: {
@@ -29,7 +29,19 @@ var option = {
  
 }
 var swiper_1 = new Swiper(".all", option );
-var swiper_2 = new Swiper(".gyeonggi", option );
-var swiper_3 = new Swiper(".Gangwon", option );
-var swiper_4 = new Swiper(".Gyeongsang", option );
-var swiper_5 = new Swiper(".Jeolla", option );
+// var swiper_2 = new Swiper(".gyeonggi", option );
+// var swiper_3 = new Swiper(".Gangwon", option );
+// var swiper_4 = new Swiper(".Gyeongsang", option );
+// var swiper_5 = new Swiper(".Jeolla", option );
+
+$('.farm #inner > ul > li').delegate('a','click', function(){
+  alert('aaa');
+  $('.all').css({
+    border:'34px solid red'
+  });
+  swiper_1.destroy();
+
+  if($(this).parent().index() == 0){
+    swiper_1 = new Swiper(".all", option );
+  }
+});

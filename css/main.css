@@ -134,10 +134,10 @@
 .farm #inner > ul a {padding:0 30px 0 0; color:#999; font-size:24px; font-weight:700;}
 .farm #inner > ul > li.current > a{color:#000; font-weight:700;}
 .swiper {overflow:hidden !important;}
-.swiper.all, .gyeonggi, .Gangwon, .Gyeongsang, .Jeolla{max-width:1020px; padding:0px 60px 0px 60px !important; display:none;}
+.swiper.all, .gyeonggi, .Gangwon, .Gyeongsang, .Jeolla{max-width:100%; padding:0px 60px 0px 60px !important; display:none;}
 .swiper-wrapper {
    padding:30px 0; }
-.swiper .swiper-slide {width:400px !important; border-radius: 30px; background-color: rgb(255, 255, 255); box-shadow: rgb(232, 239, 255) 2px 8px 20px 6px;  box-sizing: border-box; overflow: hidden;}
+.swiper .swiper-slide {border-radius: 30px; background-color: rgb(255, 255, 255); box-shadow: rgb(232, 239, 255) 2px 8px 20px 6px;  box-sizing: border-box; overflow: hidden;}
 .text {padding:20px;}
 .text p {font-size:20px; font-weight:700;}
 .text dl {margin-top:10px; display:flex; align-items:center;}
